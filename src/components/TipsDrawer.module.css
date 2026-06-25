@@ -1,0 +1,226 @@
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heroCard {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 32px;
+  backdrop-filter: blur(16px);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroPeony {
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  pointer-events: none;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--peony-blush);
+  margin-bottom: 10px;
+}
+
+.heroSubtitle {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 480px;
+}
+
+/* Section */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  padding-left: 4px;
+}
+
+/* Principles */
+.principleGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 580px) {
+  .principleGrid { grid-template-columns: 1fr 1fr; }
+}
+
+.principleCard {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+}
+
+.principleTitle {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--peony-blush);
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.principleBody {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Exercises */
+.exerciseList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exerciseWrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+}
+
+.exerciseBtn {
+  width: 100%;
+  background: var(--glass-bg);
+  border: none;
+  padding: 18px 22px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exerciseBtn:hover { background: rgba(255,255,255,0.07); }
+
+.exerciseOpen { background: rgba(255,255,255,0.07) !important; }
+
+.exMeta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.exLevel {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.exDuration {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.exTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.exChevron {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+/* Steps */
+.steps {
+  background: rgba(0,0,0,0.15);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.step:last-child { padding-bottom: 0; }
+
+.step:not(:last-child) .stepDot::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 12px;
+  width: 1px;
+  height: calc(100% - 6px);
+  background: rgba(255,255,255,0.12);
+}
+
+.stepDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepHeader {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.stepTime {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-family: 'Courier New', monospace;
+}
+
+.stepLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.stepDesc {
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}

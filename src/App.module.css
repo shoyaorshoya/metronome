@@ -1,0 +1,49 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 24px 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.tab {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+  border-color: var(--glass-border);
+  background: var(--glass-bg);
+}
+
+.tab.active {
+  color: var(--peony-blush);
+  border-color: rgba(232, 116, 154, 0.35);
+  background: rgba(232, 116, 154, 0.1);
+}
+
+.main {
+  flex: 1;
+  padding: 0 24px 60px;
+  position: relative;
+  z-index: 10;
+}
