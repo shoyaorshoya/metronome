@@ -4,7 +4,8 @@
   padding: 0;
 }
 
-:root {
+:root,
+[data-theme="dark"] {
   --bg-deep: #0d0818;
   --bg-mid: #160d2a;
   --peony-blush: #f4a7b9;
@@ -21,6 +22,65 @@
   --accent-glow: rgba(232, 116, 154, 0.4);
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', system-ui, sans-serif;
+  /* pendulum line gradient */
+  --pendulum-line: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(232,116,154,0.6));
+  /* bg gradient */
+  --bg-gradient: radial-gradient(ellipse at 30% 20%, #1a0d2e 0%, #0d0818 60%);
+  /* orb colors */
+  --orb1-color: rgba(196, 71, 110, 0.22);
+  --orb2-color: rgba(100, 60, 180, 0.2);
+  --orb3-color: rgba(232, 116, 154, 0.14);
+  /* beat dots */
+  --dot-bg: rgba(255,255,255,0.15);
+  --dot-border: rgba(255,255,255,0.2);
+  /* slider track */
+  --slider-track: rgba(255,255,255,0.15);
+  /* daily card */
+  --daily-bg: linear-gradient(135deg, rgba(232,116,154,0.1), rgba(100,60,180,0.1));
+  --daily-border: rgba(232,116,154,0.25);
+  /* tip box */
+  --tip-bg: rgba(232,116,154,0.08);
+  --tip-border: rgba(232,116,154,0.2);
+  /* step line */
+  --step-line: rgba(255,255,255,0.12);
+  /* steps area */
+  --steps-bg: rgba(0,0,0,0.15);
+  /* theme toggle icon */
+  --toggle-icon: '☀️';
+}
+
+[data-theme="light"] {
+  --bg-deep: #fdf6f9;
+  --bg-mid: #f7edf3;
+  --peony-blush: #c4476e;
+  --peony-rose: #b33060;
+  --peony-deep: #8b1a42;
+  --peony-pale: #4a1030;
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(196, 71, 110, 0.18);
+  --glass-shine: rgba(255, 255, 255, 0.8);
+  --text-primary: rgba(30, 10, 20, 0.88);
+  --text-secondary: rgba(30, 10, 20, 0.52);
+  --text-muted: rgba(30, 10, 20, 0.30);
+  --accent: #c4476e;
+  --accent-glow: rgba(196, 71, 110, 0.3);
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --pendulum-line: linear-gradient(to bottom, rgba(180,80,120,0.3), rgba(196,71,110,0.7));
+  --bg-gradient: radial-gradient(ellipse at 30% 20%, #f7dde8 0%, #fdf6f9 60%);
+  --orb1-color: rgba(232, 116, 154, 0.18);
+  --orb2-color: rgba(196, 71, 110, 0.12);
+  --orb3-color: rgba(244, 167, 185, 0.2);
+  --dot-bg: rgba(196,71,110,0.12);
+  --dot-border: rgba(196,71,110,0.25);
+  --slider-track: rgba(196,71,110,0.15);
+  --daily-bg: linear-gradient(135deg, rgba(196,71,110,0.08), rgba(180,100,160,0.08));
+  --daily-border: rgba(196,71,110,0.2);
+  --tip-bg: rgba(196,71,110,0.06);
+  --tip-border: rgba(196,71,110,0.16);
+  --step-line: rgba(196,71,110,0.15);
+  --steps-bg: rgba(196,71,110,0.04);
+  --toggle-icon: '🌙';
 }
 
 html, body {
@@ -30,13 +90,13 @@ html, body {
   color: var(--text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 #root {
   min-height: 100vh;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(232,116,154,0.3); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: rgba(196,71,110,0.3); border-radius: 2px; }

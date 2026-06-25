@@ -136,8 +136,8 @@
 }
 
 .tipBox {
-  background: rgba(232,116,154,0.08);
-  border: 1px solid rgba(232,116,154,0.2);
+  background: var(--tip-bg);
+  border: 1px solid var(--tip-border);
   border-radius: 12px;
   padding: 14px 16px;
 }
@@ -160,8 +160,8 @@
 
 /* Daily focus */
 .dailyCard {
-  background: linear-gradient(135deg, rgba(232,116,154,0.1), rgba(100,60,180,0.1));
-  border: 1px solid rgba(232,116,154,0.25);
+  background: var(--daily-bg);
+  border: 1px solid var(--daily-border);
   border-radius: 18px;
   padding: 24px;
   backdrop-filter: blur(12px);
